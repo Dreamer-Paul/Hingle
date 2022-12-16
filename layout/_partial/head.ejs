@@ -17,7 +17,7 @@
             else if(is_tag()){
                 title = page.tag;
             }
-            else if(is_post() && page.title){
+            else if(is_post() || is_page() && page.title){
                 title = page.title;
             }
 
