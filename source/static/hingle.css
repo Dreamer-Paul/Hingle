@@ -933,3 +933,36 @@ footer .sub-footer p{ font-size: .875em }
 .token.important { font-weight: normal }
 
 .namespace { opacity: .7 }
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+.line-numbers .line-numbers-rows {
+    top: 0;
+    left: 0;
+    padding: 1em 0;
+    user-select: none;
+    position: absolute;
+    pointer-events: none;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    border-right: 1px solid #ddd;
+    border-color: var(--border);
+    transition: border-color .3s;
+
+}
+
+.line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span::before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+}
