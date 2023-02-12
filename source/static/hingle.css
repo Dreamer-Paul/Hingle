@@ -622,6 +622,7 @@ article h1:before{ font-weight: bold }
 
 /* - 阅读页评论 */
 .post-comments{
+    word-break: break-word;
     scroll-margin-top: 5em;
     animation: fade-in-top .3s .5s backwards; -webkit-animation: fade-in-top .3s .5s backwards;
 }
@@ -632,8 +633,6 @@ article h1:before{ font-weight: bold }
 }
 
 /* -- 评论结构 */
-.post-comments{ word-break: break-word }
-
 .comment-form{ margin-bottom: 2em }
 
 .comment-list .comment-single{
@@ -723,6 +722,8 @@ article h1:before{ font-weight: bold }
 }
 .article-list.active{
     opacity: 1;
+    background-color: #fff;
+    background-color: var(--light-background);
     transform: translateY(0%);
 }
 .article-list::-webkit-scrollbar{ width: 0; height: 0 }
@@ -776,6 +777,8 @@ article h1:before{ font-weight: bold }
         width: 100%;
         min-height: 40%;
         max-height: 80%;
+        background-color: #fff;
+        background-color: var(--light-background);
         transform: translateY(100%);
         border-top: 1px solid #ddd;
         border-color: var(--border);
@@ -908,7 +911,6 @@ footer .sub-footer p{ font-size: .875em }
         margin-bottom: 0;
     }
 }
-
 
 /* - Prism 代码块样式 */
 .token.comment, .token.block-comment, .token.prolog, .token.doctype, .token.cdata{ color: #7D8B99 }
