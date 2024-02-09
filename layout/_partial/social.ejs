@@ -2,7 +2,11 @@
     <div class="home-social">
     <% theme.social.forEach(item => { %>
         <a href="<%= item.link %>" title="<%= item.title %>">
+        <% if (item.svg) { %>
+            <%- item.svg %>
+        <% } else { %>
             <i class="fa fa-<%= item.icon %>"></i>
+        <% } %>
         </a>
     <% }) %>
     </div>
