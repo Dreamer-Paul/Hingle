@@ -4,7 +4,7 @@
 
 # Hingle Theme
 # By: Dreamer-Paul
-# Last Update: 2024.2.9
+# Last Update: 2024.9.2
 
 一个简洁大气，含夜间模式的 Hexo 博客模板。
 
@@ -650,11 +650,6 @@ article h1:before{ font-weight: bold }
     scroll-margin-top: 5em;
     transition: transform .3s;
 }
-.comment-list .comment-single:after{
-    content: "";
-    clear: both;
-    display: block;
-}
 .comment-list .comment-single.active{ transform: scale(1.05) }
 
 .comment-list .comment-child{ margin-left: 2em }
@@ -825,6 +820,7 @@ footer .to-top, footer .toggle-list{
     padding: .5em;
     display: block;
     cursor: pointer;
+    color: var(--primary);
     background-color: #fff;
     background-color: var(--light-background);
     border-radius: .25em;
